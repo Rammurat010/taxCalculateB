@@ -1,0 +1,83 @@
+/* Centering the tax result box with a vibrant gradient background */
+.tax-result {
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff, #ff0084);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  animation: fadeIn 0.8s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Floating Effect */
+.tax-result:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Styling */
+.tax-result h2 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background: linear-gradient(90deg, #ffcc00, #ff6a00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255, 204, 0, 0.9);
+  margin-bottom: 15px;
+}
+
+/* Result Details with Stylish Effects */
+.tax-result p {
+  font-size: 22px;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #ff4b1f, #ff9068);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover Animation for Result Text */
+.tax-result p:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(255, 100, 100, 0.9),
+    0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .tax-result {
+    padding: 20px;
+    max-width: 90%;
+  }
+
+  .tax-result h2 {
+    font-size: 24px;
+  }
+
+  .tax-result p {
+    font-size: 18px;
+  }
+}
