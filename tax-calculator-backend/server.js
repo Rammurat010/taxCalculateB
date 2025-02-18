@@ -72,10 +72,10 @@ app.post("/calculate-tax", (req, res) => {
 });
 
 // Serve frontend files
-app.use(express.static(path.join(__dirname, "../tax-calculator/dist"))); // Ensure this path is correct
+app.use(express.static(path.join(__dirname, "..", "tax-calculator", "dist")));
 
 app.get("*", (_, res) => {
-  res.sendFile(path.resolve(__dirname, "../tax-calculator/dist", "index.html"));
+  res.sendFile(path.resolve(_dirname, "tax-calculator", "dist", "index.html"));
 });
 
 // Start server
