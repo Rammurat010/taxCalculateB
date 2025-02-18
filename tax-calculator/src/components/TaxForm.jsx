@@ -19,7 +19,7 @@ const TaxForm = ({ setTaxResult }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https:/taxcalculateb-1.onrender.com/calculate-tax",
+        "https://taxcalculateb-4.onrender.com/calculate-tax",
         formData
       );
       setTaxResult(response.data);
